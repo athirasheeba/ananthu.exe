@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ananthu.exe — Athira's Secret Project</title>
+    <meta name="description" content="A secret project for Ananthu — birthday, our story, and the countdown to forever." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Boot Sequence -->
+    <div id="boot" class="boot" aria-live="polite">
+      <div class="boot__inner">
+        <p class="boot__brand">Ananthu.exe</p>
+        <div class="boot__log" id="boot-log"></div>
+        <div class="boot__bar"><span id="boot-bar"></span></div>
+      </div>
+    </div>
+
+    <!-- Welcome -->
+    <section id="welcome" class="welcome hidden" aria-hidden="true">
+      <div class="welcome__atmosphere" aria-hidden="true"></div>
+      <div class="welcome__hearts" id="welcome-hearts" aria-hidden="true"></div>
+      <div class="welcome__content">
+        <p class="welcome__eyebrow">Athira's Secret Project</p>
+        <h1 class="welcome__title">
+          <span class="welcome__brand">Ananthu.exe</span>
+        </h1>
+        <p class="welcome__lead">
+          Welcome Ananthu<br />
+          You have successfully accessed<br />
+          <em>Athira's Secret Project</em>
+        </p>
+        <button type="button" class="btn" id="start-journey">Start Journey</button>
+      </div>
+    </section>
+
+    <!-- Main Journey -->
+    <main id="journey" class="journey hidden" aria-hidden="true">
+      <div class="page-hearts" id="page-hearts" aria-hidden="true"></div>
+      <nav class="nav" aria-label="Sections">
+        <a href="#birthday" class="nav__brand">Ananthu.exe</a>
+        <div class="nav__links">
+          <a href="#birthday">Birthday</a>
+          <a href="#story">Story</a>
+          <a href="#reasons">Reasons</a>
+          <a href="#memories">Memories</a>
+          <a href="#letter">Letter</a>
+          <a href="#terminal">Terminal</a>
+          <a href="#countdown">Countdown</a>
+          <a href="#gift">Gift</a>
+        </div>
+      </nav>
+
+      <!-- Section 1: Birthday -->
+      <section id="birthday" class="section birthday">
+        <div class="birthday__hero">
+          <p class="section__label">Section 01</p>
+          <h2 class="birthday__title">Happy Birthday Kichu Chetta</h2>
+          <p class="birthday__heart" aria-hidden="true">♥</p>
+        </div>
+        <div class="birthday__meta">
+          <p><span>Age</span> +1 level unlocked</p>
+          <p><span>Relationship Status</span> Future Husband ✓</p>
+        </div>
+        <pre class="dev-card" tabindex="0"><code>{
+  "name": "Ananthu",
+  "birthday": "21-10-2026",
+  "role": "Future Husband",
+  "version": "2026.10.21",
+  "supportedBy": "Athira"
+}</code></pre>
+      </section>
+
+      <!-- Section 2: Timeline -->
+      <section id="story" class="section story">
+        <p class="section__label">Section 02</p>
+        <h2 class="section__title">Our Story</h2>
+        <p class="section__sub">Tap each moment to open it.</p>
+        <ol class="timeline" id="timeline"></ol>
+      </section>
+
+      <!-- Section 3: Reasons -->
+      <section id="reasons" class="section reasons">
+        <p class="section__label">Section 03</p>
+        <h2 class="section__title">Reasons I Love You</h2>
+        <p class="section__sub">Twenty truths. Click to reveal.</p>
+        <div class="reasons__grid" id="reasons-grid"></div>
+      </section>
+
+      <!-- Section 4: Gallery -->
+      <section id="memories" class="section memories">
+        <p class="section__label">Section 04</p>
+        <h2 class="section__title">Memory Gallery</h2>
+        <p class="section__sub">Click a polaroid to unlock the note.</p>
+        <div class="polaroids" id="polaroids"></div>
+        <p class="memories__hint">Six chapters. Click each polaroid to unlock the note.</p>
+      </section>
+
+      <!-- Section 5: Letter -->
+      <section id="letter" class="section letter">
+        <p class="section__label">Section 05</p>
+        <h2 class="section__title">A Letter for You</h2>
+        <div class="letter__paper" id="letter-paper">
+          <p class="letter__body" id="letter-body"></p>
+          <span class="letter__cursor" id="letter-cursor" aria-hidden="true">|</span>
+        </div>
+      </section>
+
+      <!-- Section 6: Terminal -->
+      <section id="terminal" class="section terminal-section">
+        <p class="section__label">Section 06</p>
+        <h2 class="section__title">Hidden Terminal</h2>
+        <p class="section__sub">Type <code>help</code> to begin.</p>
+        <div class="terminal" id="terminal-app" role="application" aria-label="Developer terminal">
+          <div class="terminal__chrome">
+            <span></span><span></span><span></span>
+            <p>ananthu.exe — bash</p>
+          </div>
+          <div class="terminal__screen" id="terminal-screen"></div>
+          <form class="terminal__form" id="terminal-form" autocomplete="off">
+            <label class="sr-only" for="terminal-input">Command</label>
+            <span class="terminal__prompt">♥</span>
+            <input id="terminal-input" type="text" spellcheck="false" placeholder="type a command…" />
+          </form>
+        </div>
+      </section>
+
+      <!-- Section 7: Countdown -->
+      <section id="countdown" class="section countdown">
+        <p class="section__label">Section 07</p>
+        <h2 class="section__title">Days Until Wedding</h2>
+        <p class="countdown__date">23 May 2027</p>
+        <div class="countdown__grid" id="countdown-grid" aria-live="polite">
+          <div><strong id="cd-months">0</strong><span>Months</span></div>
+          <div><strong id="cd-days">0</strong><span>Days</span></div>
+          <div><strong id="cd-hours">0</strong><span>Hours</span></div>
+          <div><strong id="cd-mins">0</strong><span>Minutes</span></div>
+        </div>
+      </section>
+
+      <!-- Final Gift -->
+      <section id="gift" class="section gift">
+        <p class="section__label">Final Surprise</p>
+        <h2 class="section__title">One Last Thing</h2>
+        <button type="button" class="btn btn--gift" id="open-gift">Open Final Gift</button>
+        <div class="ring-box" id="ring-box" hidden>
+          <div class="ring-box__lid"></div>
+          <div class="ring-box__base">
+            <div class="ring" aria-hidden="true"></div>
+          </div>
+          <p class="ring-box__message">
+            No matter how many versions life releases,<br />
+            my favorite update will always be<br />
+            becoming your wife.
+          </p>
+          <p class="ring-box__sign">♥ Athira</p>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>Ananthu.exe · built with love by Athira </p>
+      </footer>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
