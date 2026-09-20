@@ -181,12 +181,14 @@ Ponnu ♥`;
     spawnHearts("page-hearts", "page-heart", 36);
   }
 
+  // Start hearts immediately so they show on all pages
+  startPageHearts();
+
   document.getElementById("start-journey").addEventListener("click", () => {
     welcome.classList.add("hidden");
     welcome.setAttribute("aria-hidden", "true");
     journey.classList.remove("hidden");
     journey.setAttribute("aria-hidden", "false");
-    startPageHearts();
     document.getElementById("birthday").scrollIntoView({ behavior: "smooth" });
     initJourney();
   });

@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- Global floating hearts (all pages) -->
+    <div class="page-hearts" id="page-hearts" aria-hidden="true"></div>
+
     <!-- Boot Sequence -->
     <div id="boot" class="boot" aria-live="polite">
       <div class="boot__inner">
@@ -43,7 +46,6 @@
 
     <!-- Main Journey -->
     <main id="journey" class="journey hidden" aria-hidden="true">
-      <div class="page-hearts" id="page-hearts" aria-hidden="true"></div>
       <nav class="nav" aria-label="Sections">
         <a href="#birthday" class="nav__brand">Ananthu.exe</a>
         <div class="nav__links">
@@ -150,10 +152,16 @@
         <p class="section__label">Final Surprise</p>
         <h2 class="section__title">One Last Thing</h2>
         <button type="button" class="btn btn--gift" id="open-gift">Open Final Gift</button>
-        <div class="ring-box" id="ring-box" hidden>
-          <div class="ring-box__lid"></div>
-          <div class="ring-box__base">
-            <div class="ring" aria-hidden="true"></div>
+        <div class="cake-box" id="ring-box" hidden>
+          <div class="cake" aria-hidden="true">
+            <div class="cake__candles">
+              <div class="cake__candle"><div class="cake__flame"></div></div>
+              <div class="cake__candle"><div class="cake__flame"></div></div>
+              <div class="cake__candle"><div class="cake__flame"></div></div>
+            </div>
+            <div class="cake__top"></div>
+            <div class="cake__middle"></div>
+            <div class="cake__base"></div>
           </div>
           <p class="ring-box__message">
             No matter how many versions life releases,<br />
